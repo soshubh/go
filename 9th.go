@@ -15,6 +15,7 @@ func main(){
     fmt.Println(temp_slice)   
     
     create_slice_from_array()
+    create_slice_with_make_func()
 }
 func create_slice_from_array(){
     fmt.Print("This is Slice from array\n")
@@ -23,4 +24,17 @@ func create_slice_from_array(){
     fmt.Println(slice)
     fmt.Printf("Length  : %d\n",len(slice))
     fmt.Printf("Capacity  : %d ",cap(slice))
+}
+func create_slice_with_make_func(){
+    fmt.Print("\nThis is Slice with make Fun\n")
+    //slice := make([]type, length, capacity)
+    slice := make([]int, 5,10)
+    fmt.Print(slice,"\n")
+    fmt.Printf("Lenght : %d\n",len(slice))
+    fmt.Printf("capacity : %d\n",cap(slice))
+    
+    temp_slice := make([]int,5)
+    fmt.Print(temp_slice,"\n")
+    fmt.Printf("Lenght : %d\n",len(temp_slice))
+    fmt.Printf("capacity : %d\n",cap(temp_slice))
 }
